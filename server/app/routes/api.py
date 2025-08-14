@@ -3,6 +3,7 @@ from fastapi import APIRouter, Depends, HTTPException
 from app.models import UserResponse
 from app.services.user_service import UserService, get_user_service
 
+
 router = APIRouter(prefix='/auth',
                    tags=['auth'])
 
