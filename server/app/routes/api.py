@@ -17,7 +17,7 @@ async def test():
 
 @router.get('/users/{id}', response_model=UserResponse)
 async def read_user(id: int, service: UserService = Depends(get_user_service)):
-    user = service.get_user_by_id(id)
+    user = await service.get_user_by_id(id)
     if not user: 
         raise HTTPException(status_code=404, detail="User not found")
     return user
