@@ -9,7 +9,8 @@ class Settings:
     DB_USER=os.getenv('DB_USER')
     DB_PASSWORD=os.getenv('DB_PASSWORD')
     DB_PORT=os.getenv('DB_PORT')
-    DATABASE_URL = f"postgresql+psycopg2://{DB_USER}:{DB_PASSWORD}@localhost:{DB_PORT}/{DB_NAME}" 
+    DATABASE_URL = f"postgresql+asyncpg://{DB_USER}:{DB_PASSWORD}@localhost:\
+        {DB_PORT}/{DB_NAME}" 
 
 settings = Settings()
 
